@@ -290,7 +290,7 @@ export default function AuraYield() {
 
             <button 
               onClick={() => setVisible(true)}
-              className="w-full max-w-xs py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold rounded-2xl shadow-xl shadow-amber-200/50 hover:shadow-amber-300/60 transition-all btn-press flex items-center justify-center gap-2"
+              className="w-full max-w-xs mx-auto py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold rounded-2xl shadow-xl shadow-amber-200/50 hover:shadow-amber-300/60 transition-all btn-press flex items-center justify-center gap-2"
             >
               <span>Enter the Arena</span>
               <span>→</span>
