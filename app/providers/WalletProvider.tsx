@@ -6,11 +6,9 @@ import { WalletModalProvider } from '@solana/wallet-adapter-react-ui'
 import { 
   PhantomWalletAdapter,
   SolflareWalletAdapter,
-  BackpackWalletAdapter,
 } from '@solana/wallet-adapter-wallets'
 import { clusterApiUrl } from '@solana/web3.js'
 
-// Import wallet adapter CSS
 import '@solana/wallet-adapter-react-ui/styles.css'
 
 interface Props {
@@ -18,13 +16,11 @@ interface Props {
 }
 
 export const WalletContextProvider: FC<Props> = ({ children }) => {
-  // Use devnet for development, mainnet-beta for production
   const network = process.env.NEXT_PUBLIC_SOLANA_NETWORK === 'mainnet' 
     ? 'mainnet-beta' 
     : 'devnet'
   
   const endpoint = useMemo(() => {
-    // Use custom RPC if provided, otherwise use default
     return process.env.NEXT_PUBLIC_SOLANA_RPC_URL || clusterApiUrl(network)
   }, [network])
 
@@ -32,7 +28,6 @@ export const WalletContextProvider: FC<Props> = ({ children }) => {
     () => [
       new PhantomWalletAdapter(),
       new SolflareWalletAdapter(),
-      new BackpackWalletAdapter(),
     ],
     []
   )
