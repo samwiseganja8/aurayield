@@ -304,6 +304,29 @@ export default function AuraYield() {
               ))}
             </div>
             <p className="text-[10px] text-stone-400 mt-2 uppercase tracking-wider">All Major Wearables Supported</p>
+            {/* Waitlist */}
+            <div className="mt-12 w-full max-w-xs mx-auto">
+              <form 
+                action="https://formspree.io/f/xlggeajy" 
+                method="POST"
+                className="space-y-3"
+              >
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                  className="w-full px-4 py-3 bg-white/80 border border-stone-200 rounded-xl text-stone-800 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-200 focus:border-amber-300"
+                />
+                <button
+                  type="submit"
+                  className="w-full py-3 bg-stone-800 hover:bg-stone-700 text-white font-semibold rounded-xl transition-colors"
+                >
+                  Join the Waitlist
+                </button>
+              </form>
+              <p className="text-[10px] text-stone-400 mt-3">Be first to enter the arena. No spam.</p>
+            </div>
           </div>
         ) : activeTab === 'home' ? (
           // Home Tab
